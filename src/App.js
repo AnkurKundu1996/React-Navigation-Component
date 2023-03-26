@@ -7,6 +7,7 @@ import ModalPage from "./pages/ModalPage";
 import TablePage from "./pages/TablePage";
 import CounterPage from "./pages/CounterPage";
 import PlaylistPage from "./pages/PlaylistPage";
+import CarPage from "./pages/CarPage";
 
 
 function App() {
@@ -34,6 +35,9 @@ function App() {
                 </Route>
                 <Route path='/playlist'>
                     <PlaylistPage />
+                </Route>
+                <Route path='/car'>
+                    <CarPage />
                 </Route>
             </div>
         </div >

@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { createRandomMovie } from "../../data";
 import { addMovie, removeMovie } from "../../store";
-import Button from "../Button";
 
 function MoviePlaylist() {
     const dispatch = useDispatch();
@@ -21,12 +20,12 @@ function MoviePlaylist() {
         return (
             <li key={movie}>
                 {movie}
-                <Button
-                    danger
+                <button
                     onClick={() => handleMovieRemove(movie)}
+                    className="button is-danger"
                 >
                     X
-                </Button>
+                </button>
             </li>
         );
     });
@@ -36,13 +35,12 @@ function MoviePlaylist() {
             <div className="table-header">
                 <h3 className="subtitle is-3">Movie Playlist</h3>
                 <div className="buttons">
-                    <Button
-                        primary
+                    <button
                         onClick={() => handleMovieAdd(createRandomMovie())}
                         className="button is-link"
                     >
                         + Add Movie to Playlist
-                    </Button>
+                    </button>
                 </div>
             </div>
             <ul>{renderedMovies}</ul>

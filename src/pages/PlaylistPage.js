@@ -1,11 +1,11 @@
+import "bulma/css/bulma.css";
 import "../style.css";
 import { useDispatch } from "react-redux";
 import MoviePlaylist from "../components/Playlist/MoviePlaylist";
 import SongPlaylist from "../components/Playlist/SongPlaylist";
 import { reset } from "../store";
-import Button from "../components/Button";
 
-export default function App() {
+function PlaylistPage() {
     const dispatch = useDispatch();
 
     const handleResetClick = () => {
@@ -14,9 +14,9 @@ export default function App() {
 
     return (
         <div className="container is-fluid">
-            <Button danger onClick={() => handleResetClick()}>
+            <button onClick={() => handleResetClick()} className="button is-danger">
                 Reset Both Playlists
-            </Button>
+            </button>
             <hr />
             <MoviePlaylist />
             <hr />
@@ -24,3 +24,5 @@ export default function App() {
         </div>
     );
 }
+
+export default PlaylistPage;

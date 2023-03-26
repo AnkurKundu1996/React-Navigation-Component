@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { createRandomSong } from "../../data";
 import { addSong, removeSong } from "../../store";
-import Button from "../Button";
 
 function SongPlaylist() {
     const dispatch = useDispatch();
@@ -21,12 +20,12 @@ function SongPlaylist() {
         return (
             <li key={song}>
                 {song}
-                <Button
-                    danger
+                <button
                     onClick={() => handleSongRemove(song)}
+                    className="button is-danger"
                 >
                     X
-                </Button>
+                </button>
             </li>
         );
     });
@@ -36,13 +35,12 @@ function SongPlaylist() {
             <div className="table-header">
                 <h3 className="subtitle is-3">Song Playlist</h3>
                 <div className="buttons">
-                    <Button
-                        primary
+                    <button
                         onClick={() => handleSongAdd(createRandomSong())}
                         className="button is-link"
                     >
                         + Add Song to Playlist
-                    </Button>
+                    </button>
                 </div>
             </div>
             <ul>{renderedSongs}</ul>
