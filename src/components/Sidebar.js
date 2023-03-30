@@ -9,7 +9,8 @@ function Sidebar() {
         { label: 'Table', path: '/table' },
         { label: 'Counter', path: '/counter' },
         { label: 'Playlist', path: '/playlist' },
-        { label: 'Car', path: '/car' }
+        { label: 'Car', path: '/car' },
+        { label: 'Media', path: '/media' }
     ];
 
     const renderedLinks = links.map((link) => {

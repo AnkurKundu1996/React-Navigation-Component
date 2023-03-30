@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Ankur"
+    },
+    {
+      "name": "Dana Cassin",
+      "id": 2
+    },
+    {
+      "name": "Claudia Lakin",
+      "id": 3
+    },
+    {
+      "name": "Miss Lee Marvin",
+      "id": 4
+    }
+  ],
+  "albums": [],
+  "photos": []
+}
